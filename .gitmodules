@@ -1,0 +1,3 @@
+[submodule "Externals/CppMT"]
+	path = Externals/CppMT
+	url = https://github.com/gnebehay/CppMT
