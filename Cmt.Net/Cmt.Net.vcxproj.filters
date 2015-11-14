@@ -51,6 +51,9 @@
     <ClCompile Include="..\Externals\CppMT\Tracker.cpp">
       <Filter>Source Files\CppMT</Filter>
     </ClCompile>
+    <ClCompile Include="Cmt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -76,6 +79,9 @@
     </ClInclude>
     <ClInclude Include="..\Externals\CppMT\Tracker.h">
       <Filter>Header Files\CppMT</Filter>
+    </ClInclude>
+    <ClInclude Include="Cmt.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
