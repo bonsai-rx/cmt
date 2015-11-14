@@ -13,13 +13,69 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\CppMT">
+      <UniqueIdentifier>{e5f88741-030e-469a-96e0-7ea8bd79e25d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CppMT\fastcluster">
+      <UniqueIdentifier>{818efbcc-332c-4836-beda-0f17388cd61e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CppMT">
+      <UniqueIdentifier>{f9427a3b-6371-429b-a981-42a692c83b22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CppMT\fastcluster">
+      <UniqueIdentifier>{f78f2e38-16a2-44d3-a1c0-94356ceb4a51}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\Externals\CppMT\fastcluster\fastcluster.cpp">
+      <Filter>Source Files\CppMT\fastcluster</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Externals\CppMT\CMT.cpp">
+      <Filter>Source Files\CppMT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Externals\CppMT\common.cpp">
+      <Filter>Source Files\CppMT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Externals\CppMT\Consensus.cpp">
+      <Filter>Source Files\CppMT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Externals\CppMT\Fusion.cpp">
+      <Filter>Source Files\CppMT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Externals\CppMT\Matcher.cpp">
+      <Filter>Source Files\CppMT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Externals\CppMT\Tracker.cpp">
+      <Filter>Source Files\CppMT</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Externals\CppMT\fastcluster\fastcluster.h">
+      <Filter>Header Files\CppMT\fastcluster</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Externals\CppMT\CMT.h">
+      <Filter>Header Files\CppMT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Externals\CppMT\common.h">
+      <Filter>Header Files\CppMT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Externals\CppMT\Consensus.h">
+      <Filter>Header Files\CppMT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Externals\CppMT\Fusion.h">
+      <Filter>Header Files\CppMT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Externals\CppMT\Matcher.h">
+      <Filter>Header Files\CppMT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Externals\CppMT\Tracker.h">
+      <Filter>Header Files\CppMT</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

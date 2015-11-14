@@ -54,7 +54,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NO_INCLUDE_FENV;WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
     <Link>
@@ -65,7 +65,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NO_INCLUDE_FENV;WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
     <Link>
@@ -79,10 +79,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Externals\CppMT\CMT.cpp" />
+    <ClCompile Include="..\Externals\CppMT\common.cpp" />
+    <ClCompile Include="..\Externals\CppMT\Consensus.cpp" />
+    <ClCompile Include="..\Externals\CppMT\fastcluster\fastcluster.cpp" />
+    <ClCompile Include="..\Externals\CppMT\Fusion.cpp" />
+    <ClCompile Include="..\Externals\CppMT\Matcher.cpp" />
+    <ClCompile Include="..\Externals\CppMT\Tracker.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Externals\CppMT\CMT.h" />
+    <ClInclude Include="..\Externals\CppMT\common.h" />
+    <ClInclude Include="..\Externals\CppMT\Consensus.h" />
+    <ClInclude Include="..\Externals\CppMT\fastcluster\fastcluster.h" />
+    <ClInclude Include="..\Externals\CppMT\Fusion.h" />
+    <ClInclude Include="..\Externals\CppMT\Matcher.h" />
+    <ClInclude Include="..\Externals\CppMT\Tracker.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
