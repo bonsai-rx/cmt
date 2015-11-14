@@ -1,9 +1,19 @@
 #include "Cmt.h"
 
 
-Cmt::Net::Cmt::Cmt(void):
+Cmt::Net::Cmt::Cmt():
 cmt(new cmt::CMT())
 {
+}
+
+Cmt::Net::Cmt::~Cmt()
+{
+	this->!Cmt();
+}
+
+Cmt::Net::Cmt::!Cmt()
+{
+	delete cmt;
 }
 
 void Cmt::Net::Cmt::Initialize(OpenCV::Net::Arr ^image, OpenCV::Net::Rect rect)
