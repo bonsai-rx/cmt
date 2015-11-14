@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Cmt.Net</id>
+    <version>0.1.0</version>
+    <title>CMT.NET</title>
+    <authors>Gonçalo Lopes</authors>
+    <owners>Gonçalo Lopes</owners>
+    <licenseUrl>https://raw.githubusercontent.com/glopesdev/CMT.NET/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/glopesdev/CMT.NET</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A managed wrapper to the CMT algorithm for visual object tracking.</description>
+    <copyright>Gonçalo Lopes © 2014</copyright>
+    <tags>CMT Consensus Matching Tracking Wrapper</tags>
+    <dependencies>
+      <dependency id="OpenCV.Net" version="3.3.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\Release\Cmt.Net.dll" target="build\net45\bin\x86\v110"/>
+    <file src="..\Release\Cmt.Net.xml" target="build\net45\bin\x86\v110"/>
+    <file src="..\x64\Release\Cmt.Net.dll" target="build\net45\bin\x64\v110"/>
+    <file src="..\x64\Release\Cmt.Net.xml" target="build\net45\bin\x64\v110"/>
+    <file src="NuGet\build\net45\Cmt.Net.props" target="build\net45"/>
+  </files>
+</package>

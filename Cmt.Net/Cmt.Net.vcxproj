@@ -158,6 +158,7 @@
     <ClCompile Include="Cmt.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Cmt.Net.nuspec" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

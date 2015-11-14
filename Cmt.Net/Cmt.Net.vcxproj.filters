@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Cmt.Net.nuspec" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Externals\CppMT\fastcluster\fastcluster.h">
