@@ -9,12 +9,12 @@ using namespace System::Security::Permissions;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-[assembly:AssemblyTitleAttribute("CmtNet")];
-[assembly:AssemblyDescriptionAttribute("")];
+[assembly:AssemblyTitleAttribute("CMT.NET")];
+[assembly:AssemblyDescriptionAttribute("A managed wrapper to the CMT algorithm for visual object tracking.")];
 [assembly:AssemblyConfigurationAttribute("")];
-[assembly:AssemblyCompanyAttribute("")];
-[assembly:AssemblyProductAttribute("CmtNet")];
-[assembly:AssemblyCopyrightAttribute("Copyright (c)  2015")];
+[assembly:AssemblyCompanyAttribute("Gonçalo Lopes")];
+[assembly:AssemblyProductAttribute("Cmt.Net")];
+[assembly:AssemblyCopyrightAttribute("Copyright (c) Gonçalo Lopes 2015")];
 [assembly:AssemblyTrademarkAttribute("")];
 [assembly:AssemblyCultureAttribute("")];
 
