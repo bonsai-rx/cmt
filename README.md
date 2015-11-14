@@ -1,2 +1,2 @@
 # CMT.NET
-CMT.NET is a managed wrapper to the award-winning object tracking CMT algorithm.
+CMT.NET is a managed wrapper to the CMT algorithm for visual object tracking. This is a managed C++ build of CppMT, developed by Georg Nebehay. Details about the original algorithm can be found on the project page. The implementation in this repository runs on Windows x86 and x64.
