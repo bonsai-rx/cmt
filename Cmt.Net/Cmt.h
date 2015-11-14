@@ -10,17 +10,37 @@ namespace Cmt
 {
 	namespace Net
 	{
+		/// <summary>
+		/// Represents the consensus based matching and tracking algorithm.
+		/// </summary>
 		public ref class Cmt
 		{
 		private:
 			cmt::CMT *cmt;
-		public:
-			Cmt();
 			~Cmt();
 			!Cmt();
+		public:
+			/// <summary>
+			/// Initializes a new instance of the <see cref="Cmt"/> class.
+			/// </summary>
+			Cmt();
+
+			/// <summary>
+			/// Initializes the tracker with the given image and bounding box.
+			/// </summary>
+			/// <param name="input">The source image representing the initial state of tracking.</param>
+			/// <param name="rect">The bounding box representing the initial state of tracking.</param>
 			void Initialize(OpenCV::Net::Arr ^image, OpenCV::Net::Rect rect);
+
+			/// <summary>
+			/// Updates the state of the tracker with a new image.
+			/// </summary>
+			/// <param name="input">The source image on which to look for the target.</param>
 			void ProcessFrame(OpenCV::Net::Arr ^image);
 
+			/// <summary>
+			/// Gets the currently tracked bounding box.
+			/// </summary>
 			property OpenCV::Net::RotatedRect BoundingBox
 			{
 				OpenCV::Net::RotatedRect get()
@@ -32,6 +52,9 @@ namespace Cmt
 				}
 			}
 
+			/// <summary>
+			/// Gets the currently active points for visualization purposes.
+			/// </summary>
 			property System::Collections::Generic::IEnumerable<OpenCV::Net::Point2f> ^ ActivePoints
 			{
 				System::Collections::Generic::IEnumerable<OpenCV::Net::Point2f> ^ get()
