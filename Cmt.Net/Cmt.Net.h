@@ -17,6 +17,7 @@ namespace Cmt
 		{
 		private:
 			cmt::CMT *cmt;
+			OpenCV::Net::Arr ^previous;
 			~Cmt() { this->!Cmt(); }
 			!Cmt();
 		public:
