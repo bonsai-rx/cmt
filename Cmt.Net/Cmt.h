@@ -28,14 +28,14 @@ namespace Cmt
 			/// <summary>
 			/// Initializes the tracker with the given image and bounding box.
 			/// </summary>
-			/// <param name="input">The source image representing the initial state of tracking.</param>
+			/// <param name="image">The source image representing the initial state of tracking.</param>
 			/// <param name="rect">The bounding box representing the initial state of tracking.</param>
 			void Initialize(OpenCV::Net::Arr ^image, OpenCV::Net::Rect rect);
 
 			/// <summary>
 			/// Updates the state of the tracker with a new image.
 			/// </summary>
-			/// <param name="input">The source image on which to look for the target.</param>
+			/// <param name="image">The source image on which to look for the target.</param>
 			void ProcessFrame(OpenCV::Net::Arr ^image);
 
 			/// <summary>
