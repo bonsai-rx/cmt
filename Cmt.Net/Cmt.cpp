@@ -6,11 +6,6 @@ cmt(new cmt::CMT())
 {
 }
 
-Cmt::Net::Cmt::~Cmt()
-{
-	this->!Cmt();
-}
-
 Cmt::Net::Cmt::!Cmt()
 {
 	delete cmt;

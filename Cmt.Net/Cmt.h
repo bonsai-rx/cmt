@@ -17,7 +17,7 @@ namespace Cmt
 		{
 		private:
 			cmt::CMT *cmt;
-			~Cmt();
+			~Cmt() { this->!Cmt(); }
 			!Cmt();
 		public:
 			/// <summary>
