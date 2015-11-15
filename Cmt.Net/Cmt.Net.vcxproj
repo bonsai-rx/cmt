@@ -155,7 +155,7 @@
     <ClCompile Include="..\Externals\CppMT\Matcher.cpp" />
     <ClCompile Include="..\Externals\CppMT\Tracker.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
-    <ClCompile Include="Cmt.cpp" />
+    <ClCompile Include="Cmt.Net.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Cmt.Net.nuspec" />
@@ -171,7 +171,7 @@
     <ClInclude Include="..\Externals\CppMT\Fusion.h" />
     <ClInclude Include="..\Externals\CppMT\Matcher.h" />
     <ClInclude Include="..\Externals\CppMT\Tracker.h" />
-    <ClInclude Include="Cmt.h" />
+    <ClInclude Include="Cmt.Net.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

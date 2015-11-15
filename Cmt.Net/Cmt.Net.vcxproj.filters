@@ -51,7 +51,7 @@
     <ClCompile Include="..\Externals\CppMT\Tracker.cpp">
       <Filter>Source Files\CppMT</Filter>
     </ClCompile>
-    <ClCompile Include="Cmt.cpp">
+    <ClCompile Include="Cmt.Net.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -81,7 +81,7 @@
     <ClInclude Include="..\Externals\CppMT\Tracker.h">
       <Filter>Header Files\CppMT</Filter>
     </ClInclude>
-    <ClInclude Include="Cmt.h">
+    <ClInclude Include="Cmt.Net.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
