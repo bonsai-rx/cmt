@@ -1,18 +1,18 @@
 #include "Cmt.Net.h"
 
 
-Cmt::Net::Cmt::Cmt():
+Cmt::Net::TrackerCmt::TrackerCmt():
 cmt(new cmt::CMT())
 {
 }
 
-Cmt::Net::Cmt::!Cmt()
+Cmt::Net::TrackerCmt::!TrackerCmt()
 {
 	delete cmt;
 	previous = nullptr;
 }
 
-void Cmt::Net::Cmt::Initialize(OpenCV::Net::Arr ^image, OpenCV::Net::Rect rect)
+void Cmt::Net::TrackerCmt::Initialize(OpenCV::Net::Arr ^image, OpenCV::Net::Rect rect)
 {
 	if (image == nullptr)
 	{
@@ -25,7 +25,7 @@ void Cmt::Net::Cmt::Initialize(OpenCV::Net::Arr ^image, OpenCV::Net::Rect rect)
 	previous = image;
 }
 
-void Cmt::Net::Cmt::ProcessFrame(OpenCV::Net::Arr ^image)
+void Cmt::Net::TrackerCmt::ProcessFrame(OpenCV::Net::Arr ^image)
 {
 	if (image == nullptr)
 	{

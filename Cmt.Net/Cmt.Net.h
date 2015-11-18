@@ -13,18 +13,18 @@ namespace Cmt
 		/// <summary>
 		/// Represents the consensus based matching and tracking algorithm.
 		/// </summary>
-		public ref class Cmt
+		public ref class TrackerCmt
 		{
 		private:
 			cmt::CMT *cmt;
 			OpenCV::Net::Arr ^previous;
-			~Cmt() { this->!Cmt(); }
-			!Cmt();
+			~TrackerCmt() { this->!TrackerCmt(); }
+			!TrackerCmt();
 		public:
 			/// <summary>
-			/// Initializes a new instance of the <see cref="Cmt"/> class.
+			/// Initializes a new instance of the <see cref="TrackerCmt"/> class.
 			/// </summary>
-			Cmt();
+			TrackerCmt();
 
 			/// <summary>
 			/// Initializes the tracker with the given image and bounding box.
