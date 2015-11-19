@@ -14,6 +14,10 @@ namespace Bonsai.Cmt
 {
     public class CmtTracker : Transform<IplImage, ConnectedComponent>
     {
+        public bool EstimateRotation { get; set; }
+
+        public bool EstimateScale { get; set; }
+
         [Description("The region of interest inside the input image.")]
         [Editor("Bonsai.Vision.Design.IplImageInputRectangleEditor, Bonsai.Vision.Design", typeof(UITypeEditor))]
         public Rect RegionOfInterest { get; set; }
@@ -27,7 +31,8 @@ namespace Bonsai.Cmt
                 var initialized = false;
                 return source.Select(input =>
                 {
-                    tracker.EstimateRotation = true;
+                    tracker.EstimateRotation = EstimateRotation;
+                    tracker.EstimateScale = EstimateScale;
                     if (inputRoi != RegionOfInterest)
                     {
                         inputRoi = RegionOfInterest;
