@@ -34,29 +34,36 @@ namespace Bonsai.Cmt
                 var initialized = false;
                 return source.Select(input =>
                 {
+                    var frame = input;
+                    if (input.Channels == 3)
+                    {
+                        frame = new IplImage(input.Size, input.Depth, 1);
+                        CV.CvtColor(input, frame, ColorConversion.Bgr2Gray);
+                    }
+
                     tracker.EstimateRotation = EstimateRotation;
                     tracker.EstimateScale = EstimateScale;
                     if (inputRoi != RegionOfInterest)
                     {
                         inputRoi = RegionOfInterest;
-                        tracker.Initialize(input, inputRoi);
+                        tracker.Initialize(frame, inputRoi);
                         initialized = true;
                     }
 
                     var component = new ConnectedComponent();
                     if (initialized)
                     {
-                        tracker.ProcessFrame(input);
+                        tracker.ProcessFrame(frame);
                         var boundingBox = tracker.BoundingBox;
                         component.Centroid = boundingBox.Center;
-                        var boundingContour = new RectangleContour(boundingBox, input.Size);
+                        var boundingContour = new RectangleContour(boundingBox, frame.Size);
                         if (!float.IsNaN(boundingBox.Center.X) &&
                             boundingContour.Rect.Width > 0 &&
                             boundingContour.Rect.Height > 0)
                         {
                             component.Area = boundingBox.Size.Width * boundingBox.Size.Height;
                             component.Orientation = boundingBox.Angle * Math.PI / 180f;
-                            component.Contour = new RectangleContour(boundingBox, input.Size);
+                            component.Contour = boundingContour;
                             component.Patch = input.GetSubRect(component.Contour.Rect);
                             component.MajorAxisLength = 0;
                             component.MinorAxisLength = 0;
