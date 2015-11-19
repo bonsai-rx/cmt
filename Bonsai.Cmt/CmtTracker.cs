@@ -12,13 +12,16 @@ using Bonsai.Vision;
 
 namespace Bonsai.Cmt
 {
+    [Description("Tracks a specified object over time using the self-supervised CMT algorithm.")]
     public class CmtTracker : Transform<IplImage, ConnectedComponent>
     {
+        [Description("Indicates whether to estimate the rotation of the object.")]
         public bool EstimateRotation { get; set; }
 
+        [Description("Indicates whether to estimate the scale of the object.")]
         public bool EstimateScale { get; set; }
 
-        [Description("The region of interest inside the input image.")]
+        [Description("The region of interest to track inside the input image.")]
         [Editor("Bonsai.Vision.Design.IplImageInputRectangleEditor, Bonsai.Vision.Design", typeof(UITypeEditor))]
         public Rect RegionOfInterest { get; set; }
 
