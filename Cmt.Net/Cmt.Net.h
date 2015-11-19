@@ -40,6 +40,24 @@ namespace Cmt
 			void ProcessFrame(OpenCV::Net::Arr ^image);
 
 			/// <summary>
+			/// Gets or sets a value indicating whether to estimate the scale of the tracked object.
+			/// </summary>
+			property bool EstimateScale
+			{
+				bool get() { return cmt->consensus.estimate_scale; }
+				void set(bool value) { cmt->consensus.estimate_scale = value; }
+			}
+
+			/// <summary>
+			/// Gets or sets a value indicating whether to estimate the rotation of the tracked object.
+			/// </summary>
+			property bool EstimateRotation
+			{
+				bool get() { return cmt->consensus.estimate_rotation; }
+				void set(bool value) { cmt->consensus.estimate_rotation = value; }
+			}
+
+			/// <summary>
 			/// Gets the currently tracked bounding box.
 			/// </summary>
 			property OpenCV::Net::RotatedRect BoundingBox
