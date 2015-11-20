@@ -28,14 +28,14 @@ namespace Bonsai.Cmt
             {
                 var ptr = Marshal.AllocHGlobal(HeaderSize);
                 var points = (int*)((byte*)ptr + Contour.HeaderSize + SeqBlockSize);
-                points[0] = Math.Max(0, Math.Min(imageSize.Width, (int)(center.X - a * size.Height - b * size.Width)));
-                points[1] = Math.Max(0, Math.Min(imageSize.Height, (int)(center.Y + b * size.Height - a * size.Width)));
-                points[2] = Math.Max(0, Math.Min(imageSize.Width, (int)(center.X + a * size.Height - b * size.Width)));
-                points[3] = Math.Max(0, Math.Min(imageSize.Height, (int)(center.Y - b * size.Height - a * size.Width)));
-                points[4] = Math.Max(0, Math.Min(imageSize.Width, (int)(2 * center.X - points[0])));
-                points[5] = Math.Max(0, Math.Min(imageSize.Height, (int)(2 * center.Y - points[1])));
-                points[6] = Math.Max(0, Math.Min(imageSize.Width, (int)(2 * center.X - points[2])));
-                points[7] = Math.Max(0, Math.Min(imageSize.Height, (int)(2 * center.Y - points[3])));
+                points[0] = Math.Max(0, Math.Min(imageSize.Width - 1, (int)(center.X - a * size.Height - b * size.Width)));
+                points[1] = Math.Max(0, Math.Min(imageSize.Height - 1, (int)(center.Y + b * size.Height - a * size.Width)));
+                points[2] = Math.Max(0, Math.Min(imageSize.Width - 1, (int)(center.X + a * size.Height - b * size.Width)));
+                points[3] = Math.Max(0, Math.Min(imageSize.Height - 1, (int)(center.Y - b * size.Height - a * size.Width)));
+                points[4] = Math.Max(0, Math.Min(imageSize.Width - 1, (int)(2 * center.X - points[0])));
+                points[5] = Math.Max(0, Math.Min(imageSize.Height - 1, (int)(2 * center.Y - points[1])));
+                points[6] = Math.Max(0, Math.Min(imageSize.Width - 1, (int)(2 * center.X - points[2])));
+                points[7] = Math.Max(0, Math.Min(imageSize.Height - 1, (int)(2 * center.Y - points[3])));
 
                 Rect boundingRect;
                 var minX = Math.Min(Math.Min(Math.Min(points[0], points[2]), points[4]), points[6]);
@@ -44,8 +44,8 @@ namespace Bonsai.Cmt
                 var maxY = Math.Max(Math.Max(Math.Max(points[1], points[3]), points[5]), points[7]);
                 boundingRect.X = minX;
                 boundingRect.Y = minY;
-                boundingRect.Width = maxX - minX;
-                boundingRect.Height = maxY - minY;
+                boundingRect.Width = maxX - minX + 1;
+                boundingRect.Height = maxY - minY + 1;
 
                 var seqBlock = (_CvSeqBlock*)((byte*)ptr + Contour.HeaderSize);
                 seqBlock->start_index = 0;
