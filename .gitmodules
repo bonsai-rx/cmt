@@ -1,3 +1,4 @@
 [submodule "Externals/CppMT"]
 	path = Externals/CppMT
-	url = https://github.com/gnebehay/CppMT
+	url = https://github.com/glopesdev/CppMT
+	branch = devel
