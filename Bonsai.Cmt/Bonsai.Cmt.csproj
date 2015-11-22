@@ -84,6 +84,7 @@
     <Compile Include="RectangleContour.cs" />
     <Compile Include="CmtTracker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrackedComponent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Bonsai.Cmt.nuspec" />

@@ -13,7 +13,7 @@ using Bonsai.Vision;
 namespace Bonsai.Cmt
 {
     [Description("Tracks a specified object over time using the self-supervised CMT algorithm.")]
-    public class CmtTracker : Transform<IplImage, ConnectedComponent>
+    public class CmtTracker : Transform<IplImage, TrackedComponent>
     {
         [Description("Indicates whether to estimate the rotation of the object.")]
         public bool EstimateRotation { get; set; }
@@ -25,7 +25,7 @@ namespace Bonsai.Cmt
         [Editor("Bonsai.Vision.Design.IplImageInputRectangleEditor, Bonsai.Vision.Design", typeof(UITypeEditor))]
         public Rect RegionOfInterest { get; set; }
 
-        public override IObservable<ConnectedComponent> Process(IObservable<IplImage> source)
+        public override IObservable<TrackedComponent> Process(IObservable<IplImage> source)
         {
             return Observable.Defer(() =>
             {
@@ -50,7 +50,7 @@ namespace Bonsai.Cmt
                         initialized = true;
                     }
 
-                    var component = new ConnectedComponent();
+                    var component = new TrackedComponent();
                     if (initialized)
                     {
                         tracker.ProcessFrame(frame);
@@ -69,6 +69,7 @@ namespace Bonsai.Cmt
                             component.MinorAxisLength = 0;
                         }
                         else component.Orientation = double.NaN;
+                        component.Confidence = tracker.Confidence;
                     }
                     return component;
                 });
