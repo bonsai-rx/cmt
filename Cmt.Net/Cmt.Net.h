@@ -72,6 +72,14 @@ namespace Cmt
 			}
 
 			/// <summary>
+			/// Gets the confidence level for the currently tracked bounding box.
+			/// </summary>
+			property float Confidence
+			{
+				float get() { return cmt->confidence; }
+			}
+
+			/// <summary>
 			/// Gets the currently active points for visualization purposes.
 			/// </summary>
 			property System::Collections::Generic::IEnumerable<OpenCV::Net::Point2f> ^ ActivePoints
