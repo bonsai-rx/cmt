@@ -12,6 +12,7 @@ using Bonsai.Vision;
 
 namespace Bonsai.Cmt
 {
+    [DefaultProperty("RegionOfInterest")]
     [Description("Tracks a specified object over time using the self-supervised CMT algorithm.")]
     public class CmtTracker : Transform<IplImage, TrackedComponent>
     {
